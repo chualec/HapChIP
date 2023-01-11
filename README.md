@@ -1,0 +1,2 @@
+# hichip
+HiChIP processing pipeline
