@@ -1,0 +1,23 @@
+Software Requirement Specification
+For: hichip
+by: Alec
+
+1. Introduction
+This is a tool to process raw hichip data from fastq files. The core of the tool will be to:
+	a. perform rudimentary quality control including
+		i. percentage of high quality reads mapping uniquly
+		ii. percent of trans-chromosome reads
+		iii. 
+	b. identify locations where hichip reads are significantly bounded
+	c. Create rudimentary map of connected spaces
+	d. perform plotting of quality control
+
+2. Overall description
+Input: Paired fastq files for HiChIP samples.
+Output: paired information files for the HiChIP.
+Method: 
+
+3. Requirements
+Packages: Conda environment, snakemake tools.
+Input data format: This should be in fastq files without pre-processing.
+
