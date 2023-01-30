@@ -4,3 +4,6 @@
 This file will be provided by the user. A test file will be provided.
 
 2. a datafile with common genetic mutations in ewing's sarcoma.
+
+
+cimputing requirements:
