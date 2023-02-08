@@ -20,3 +20,5 @@ HaPChIP
   - [ ] 3.2 Create prototype build
   - [ ] 3.3 Run test samples in new environment
   - [ ] 3.4 Receive feedback
+- Activity 4: Build prototype II
+  - [ ] 4.1 Define which feedbacks are implimentable 
