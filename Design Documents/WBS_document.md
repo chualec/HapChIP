@@ -22,3 +22,12 @@ HaPChIP
   - [ ] 3.4 Receive feedback
 - Activity 4: Build prototype II
   - [ ] 4.1 Define which feedbacks are implimentable 
+  - [ ] 4.2 Discuss with team on how to break down improvements for prototype II
+- Activity 5: Test prototype II
+  - [ ] 5.1 Run test samples with larger dataset in new environment
+  - [ ] 5.2 Receive more feedback.
+- Activity 6: Build final version
+  - [ ] 6.1 Implement final features for the sample
+  - [ ] 6.2 Run final version with complete dataset
+  - [ ] 6.3 Document run memory, RAM usage, and time
+  - [ ] 6.4 Perform last grammar check for all documents
