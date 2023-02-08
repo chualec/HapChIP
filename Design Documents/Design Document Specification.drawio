@@ -1,59 +1,145 @@
-<mxfile host="app.diagrams.net" modified="2023-01-18T15:37:36.503Z" agent="5.0 (Windows)" etag="LxfMwk_n7hhrXHrrr5WV" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-08T22:33:11.400Z" agent="5.0 (Windows)" etag="Jp2armTLdslSPshHfPLB" version="20.8.18" type="github">
   <diagram name="Page-1" id="6133507b-19e7-1e82-6fc7-422aa6c4b21f">
-    <mxGraphModel dx="1059" dy="525" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1103" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="9TMIq2lv669NXwmXEwUK-1" value="Problem" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="180" width="140" height="90" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.648;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9TMIq2lv669NXwmXEwUK-9" target="qg7dh4EXNKZFoJpO949P-23">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-2" value="Add to document description" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-1">
-          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9TMIq2lv669NXwmXEwUK-9" target="qg7dh4EXNKZFoJpO949P-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="290" />
+              <mxPoint x="460" y="350" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-3" value="Citation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-1">
-          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        <mxCell id="9TMIq2lv669NXwmXEwUK-9" value="&#xa;&#xa;Input File" style="swimlane;startSize=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="150" width="270" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-10" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
-          <mxGeometry x="430" y="160" width="160" height="470" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-6" value="&lt;div&gt;What kinds of input files should be used?&lt;/div&gt;&lt;div&gt;Are there pre-processings needed?&lt;/div&gt;&lt;div&gt;What references will be needed?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-9">
+          <mxGeometry x="10" y="40" width="250" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-12" value="User Interface" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-10">
-          <mxGeometry x="10" y="20" width="140" height="120" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-18" target="qg7dh4EXNKZFoJpO949P-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1065" y="460" />
+              <mxPoint x="40" y="460" />
+              <mxPoint x="40" y="705" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-13" value="Helper Tools" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-12">
-          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-18" value="&#xa;&#xa;Reading in Processed Data&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="930" y="160" width="270" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-14" value="Troubleshooting" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-12">
-          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-23" target="qg7dh4EXNKZFoJpO949P-25">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-15" value="Error Feedbacks" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-12">
-          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-23" value="&#xa;&#xa;Pre-processing data&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="230" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-11" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
-          <mxGeometry x="620" y="160" width="160" height="470" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-24" value="&lt;div&gt;Requires:&lt;/div&gt;&lt;div&gt;Alignment tools: BWA&lt;/div&gt;&lt;div&gt;Post-alignment processing: Picard&lt;br&gt;&lt;/div&gt;&lt;div&gt;Reference Files: HG38&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-23">
+          <mxGeometry x="10" y="40" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-9" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
-          <mxGeometry x="240" y="160" width="160" height="470" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-25" target="qg7dh4EXNKZFoJpO949P-30">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-5" value="Proposed Solution" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-9">
-          <mxGeometry x="10" y="320" width="140" height="120" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-25" target="qg7dh4EXNKZFoJpO949P-18">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-6" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-5">
-          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-25" value="&#xa;&#xa;Gathering Variant Information&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="100" width="230" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-7" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-5">
-          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-26" value="&lt;div&gt;Requires:&lt;/div&gt;&lt;div&gt;Variant caller: GATK&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-25">
+          <mxGeometry x="10" y="40" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-8" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9TMIq2lv669NXwmXEwUK-5">
-          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-30" target="qg7dh4EXNKZFoJpO949P-18">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-16" value="To Do" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="120" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-30" value="&#xa;&#xa;Gathering Haplotype Information&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="275" width="230" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-17" value="Doing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="120" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-31" value="&lt;div&gt;Requires:&lt;/div&gt;&lt;div&gt;Haplotype Splitter&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-30">
+          <mxGeometry x="10" y="40" width="210" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9TMIq2lv669NXwmXEwUK-18" value="Done" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="630" y="120" width="140" height="30" as="geometry" />
+        <mxCell id="qg7dh4EXNKZFoJpO949P-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.014;entryY=0.527;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-36" target="qg7dh4EXNKZFoJpO949P-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-36" target="qg7dh4EXNKZFoJpO949P-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-36" value="&#xa;&#xa;Processing Data&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="510" width="460" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="qg7dh4EXNKZFoJpO949P-36" source="qg7dh4EXNKZFoJpO949P-20" target="qg7dh4EXNKZFoJpO949P-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-20" value="Determine number of variants on each read" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-36">
+          <mxGeometry x="170" y="60" width="100" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="qg7dh4EXNKZFoJpO949P-36" source="qg7dh4EXNKZFoJpO949P-45" target="qg7dh4EXNKZFoJpO949P-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-45" value="Determine most likely Haplotype of each read" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-36">
+          <mxGeometry x="300" y="60" width="130" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="qg7dh4EXNKZFoJpO949P-36" source="qg7dh4EXNKZFoJpO949P-46" target="qg7dh4EXNKZFoJpO949P-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-46" value="Read in Bam reads" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-36">
+          <mxGeometry x="20" y="60" width="100" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="qg7dh4EXNKZFoJpO949P-36" source="qg7dh4EXNKZFoJpO949P-47" target="qg7dh4EXNKZFoJpO949P-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-47" value="Read in Variant information" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-36">
+          <mxGeometry x="20" y="280" width="100" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-56" value="Write to output" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-36">
+          <mxGeometry x="300" y="200" width="130" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="qg7dh4EXNKZFoJpO949P-36" source="qg7dh4EXNKZFoJpO949P-58" target="qg7dh4EXNKZFoJpO949P-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-58" value="Determine if good or bad read" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-36">
+          <mxGeometry x="20" y="170" width="100" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-41" target="qg7dh4EXNKZFoJpO949P-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.447;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-41" target="qg7dh4EXNKZFoJpO949P-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-41" value="&#xa;&#xa;Output File 1:&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="510" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-42" value="These will include 2 bam files for reads found on Haplotype 1 and Haplotype 2" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-41">
+          <mxGeometry x="10" y="40" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-44" value="&lt;div&gt;This will use python packages:&lt;/div&gt;&lt;div&gt;Pysam&lt;/div&gt;&lt;div&gt;Pandas&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="210" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qg7dh4EXNKZFoJpO949P-61" target="qg7dh4EXNKZFoJpO949P-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-61" value="&#xa;&#xa;Output File 2:&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="725" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-62" value="This will include 2 bam files for reads on ambiguous haplotypes or trans-chromsome" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-61">
+          <mxGeometry x="10" y="40" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-65" value="&#xa;&#xa;Output File 3:&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="910" y="725" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-66" value="&lt;div&gt;Graphical representation of quality control using output1 and output2&lt;/div&gt;&lt;div&gt;How many trans-chromosome reads?&lt;/div&gt;&lt;div&gt;How many ambiguous reads?&lt;/div&gt;&lt;div&gt;Average informative variants per read&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-65">
+          <mxGeometry x="10" y="40" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-70" value="&#xa;&#xa;&#xa;Output 4&#xa;" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="910" y="520" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qg7dh4EXNKZFoJpO949P-71" value="List of locations with differential amount of cis-chromosome reads on one haplotype compared to the other haplotype" style="whiteSpace=wrap;html=1;" vertex="1" parent="qg7dh4EXNKZFoJpO949P-70">
+          <mxGeometry x="10" y="40" width="250" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
