@@ -8,6 +8,14 @@ from datetime import datetime
 import pysam
 
 def welcome(options):
+  '''
+  This function displays a welcomd message
+  and prints out the detected input files for:
+    bam file
+    VCF file
+    output directory
+    optional name
+  '''
   print("")
   print("*************")
   print("thank you for using the HapChIP")
@@ -23,6 +31,10 @@ def welcome(options):
 
 
 def progressBar(current, total, end = False, text = "NA"):
+  '''
+  This function helps display a progress bar on the bottom of the screen while running.
+  This helps users know whether the progress has stopped or not.
+  '''
     barLength = 20
     percent = float(current) * 100 / total
     raw_num = str(current)+ "/" + str(total) + "\r"
@@ -37,6 +49,15 @@ def progressBar(current, total, end = False, text = "NA"):
       
 #the cigar seq function expands the sequence information to account for soft clipping, insertions, and deletions
 def cigarseq(bam_read):
+  '''
+  This function reads the bam read's information from the CIGAR seq and alignment sequence.
+  And returns a full-length sequence of of the bam read containing clipping, insertion, and deletion information.
+  
+  input:
+    bam read object
+  output:
+    string
+  '''
   read_seq = bam_read.query_alignment_sequence
   quality_seq = bam_read.query_alignment_qualities
   cig_seq = ''
@@ -61,17 +82,43 @@ def cigarseq(bam_read):
   
   
 def get_seq_base(bam_read, var_pos):
+  '''
+  This function returns the base of the bam read based on position of variant.
+  Input:
+    bam read
+    variant position (int)
+  output:
+    string
+  '''
   cigar_seq = cigarseq(bam_read)
   ref_base = var_pos - bam_read.pos - 1
   # return(cigar_seq[ref_base], str(qual_seq[ref_base]))
   return(cigar_seq[ref_base])
 
 def grab_genotype(rec):
+  '''
+  This function grabs genotype information from the VCF file
+  input:
+    variant information
+  output:
+    string (genotype)
+  '''
   format_entry = str(rec).split()[-1]
   genotype = format_entry.split(":")[0]
   return(genotype)
 
 def check_var(rec):
+  '''
+  This function performs a QC check for the variant 
+  The criterias for exclusion are:
+    multiple genotypes
+    indel
+    non-standard chromosome
+  input:
+    variant information
+  output:
+    True or False
+  '''
   checkok = True
   alleles = rec.alleles
   #check if indel
@@ -85,6 +132,20 @@ def check_var(rec):
   return(checkok)
 
 def grab_haplotype(var_ref, var_alt, var_base, GT):
+  '''
+  This function takes haplotype information and variant information
+  to assign the genotype information to the variant
+  input:
+    variant reference (ATCG)
+    variant alt (ATCG)
+    variant base (ATCG)
+    GT (genotype information)
+  output:
+    haplotype (represented as int)
+      0 = unknown
+      1 = 0|1
+      2 = 1|0
+  '''
   hap = 0
   if var_base == var_ref and var_base != var_alt:
     if GT == "0|1":
@@ -99,6 +160,15 @@ def grab_haplotype(var_ref, var_alt, var_base, GT):
   return(hap)
 
 def check_read(sam_read):
+  '''
+  performs a QC check on the bam read
+  removes if mapping quality is 0
+  removes if no aligned read in bam file
+  input:
+    bam read
+  output:
+    True or False
+  '''
   if int(sam_read.mapping_quality) == 0:
     return(False)
   for cig in sam_read.cigar:
@@ -107,6 +177,17 @@ def check_read(sam_read):
   return(False)
 
 def reduce_hap(hap_list):
+  '''
+  This function reduces haplotype lists to one output via hierchy
+  0 = unknown
+  1 = 0|1
+  2 = 1|0
+  3 = conflict
+  input:
+    list of strings representing haplotye
+  output:
+    int (0~3)
+  '''
   if 3 in hap_list:
     return(3)
   elif 1 in hap_list and 2 in hap_list:
@@ -119,6 +200,18 @@ def reduce_hap(hap_list):
     return(0)
 
 def parse_hichip(bam_in, vcf):
+  '''
+  This is the main looping function.
+  This loops through each variant position
+  grab all bam reads for each variant position
+  determines bam haplotype information for each variant-read pair
+  and adds them to a dictionary
+  input:
+    bam file
+    vcf file
+  output:
+    dictionary of read info
+  '''
   print("starting parse hichip...")
   var_count = 0
   num_lines = len(list(vcf.fetch()))
@@ -155,6 +248,17 @@ def parse_hichip(bam_in, vcf):
   return(RX_library)
 
 def vote_hap_majority(RX_dict, log):
+  '''
+  This takes the read haplotype library and votes on which haplotype each read should belong in
+  A read is determined to be a certain haplotype if:
+    no conflicting haplotype is found
+    have a 80% representation for one haplotype when more than 5 phased variants are found
+    
+  input:
+    dictionary of reads and haplotype
+  output:
+    simplified phased dictionary of reads and haplotype
+  '''
   for RX in RX_dict:
     haplist = RX_dict[RX]
     len0 = haplist.count(0)
@@ -179,14 +283,24 @@ def vote_hap_majority(RX_dict, log):
         RX_dict[RX] = 3
   return(RX_dict)
 
-def write_library(RX_library):
-  print(RX_library)
+# def write_library(RX_library):
+  # print(RX_library)
   # test = open("/mctp/share/users/chualec/hichip/vif/files/test.txt", "w")
   # for i in RX_library:
   #   strings = "\t".join[str(i), RX_library[i], "\r"]
   #   test.write(strings)
 
 def parse_hichip2(bam_in, RX_library, bam_out):
+  '''
+  This functions takes the read-bam library and writes the bam read to different outputs files based on the haplotype
+  
+  input:
+    bam file
+    bam libary
+    output files
+  output:
+    none
+  '''
   for bam_read in bam_in:
     if check_read(bam_read):
       RX = str(bam_read.query_name)
@@ -197,6 +311,13 @@ def parse_hichip2(bam_in, RX_library, bam_out):
       bam_out[hap].write(bam_read)
 
 def main(options):
+  '''
+  This is the main function to read in information from the options given
+  input:
+    parsed options object
+  output:
+    none
+  '''
   welcome(options)
   print("")
   print("starting vif converter")
@@ -230,7 +351,7 @@ def main(options):
   RX_dict = parse_hichip(bam_in, vcf)
   print("finished parsing, starting voting...")
   RX_dict = vote_hap_majority(RX_dict,log)
-  write_library(RX_dict)
+  # write_library(RX_dict)
   bam_in.close()
   bam_in   = pysam.AlignmentFile(options.reads)
   print("finished voting, starting parsing again...")
@@ -242,6 +363,13 @@ def main(options):
 
 
 if __name__ == '__main__':
+  '''
+  This function parses options from the command line
+  input:
+    none
+  output:
+    parsed options
+  '''
   parser = argparse.ArgumentParser()
   parser.add_argument('-b', '--reads', type=str,
                       required=True,
