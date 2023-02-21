@@ -29,3 +29,5 @@ by: Alec
       - bam file of trans-interaction
 3. Requirements
   a. Required packages include: Conda environment, snakemake tools.
+  
+A unit test has been provided with a bam file and vcf file covering the region chr12:24000000-27000000
