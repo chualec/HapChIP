@@ -35,17 +35,17 @@ def progressBar(current, total, end = False, text = "NA"):
   This function helps display a progress bar on the bottom of the screen while running.
   This helps users know whether the progress has stopped or not.
   '''
-    barLength = 20
-    percent = float(current) * 100 / total
-    raw_num = str(current)+ "/" + str(total) + "\r"
-    arrow   = '-' * int(percent/100 * barLength - 1) + '>'
-    spaces  = ' ' * (barLength - len(arrow))
-    if not end:
-      print('Progress: [%s%s] %d %% %s' % (arrow, spaces, percent,raw_num), end='\r')
-    else:
-      print('Progress: [%s%s] %d %% %s' % (arrow, spaces, percent,raw_num))
-      print(text)
-      print("")
+  barLength = 20
+  percent = float(current) * 100 / total
+  raw_num = str(current)+ "/" + str(total) + "\r"
+  arrow   = '-' * int(percent/100 * barLength - 1) + '>'
+  spaces  = ' ' * (barLength - len(arrow))
+  if not end:
+    print('Progress: [%s%s] %d %% %s' % (arrow, spaces, percent,raw_num), end='\r')
+  else:
+    print('Progress: [%s%s] %d %% %s' % (arrow, spaces, percent,raw_num))
+    print(text)
+    print("")
       
 #the cigar seq function expands the sequence information to account for soft clipping, insertions, and deletions
 def cigarseq(bam_read):
