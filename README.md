@@ -43,5 +43,12 @@ cd HapChIP
 conda create env --name env --file environment.yaml
 ```
 
+
+example run
+``` sh
+python3 HapChIP/HapChIP.py -b example_input/example.bam -v example_input/example.vcf.gz -o ./example_output
+```
+
+
   
 A unit test has been provided with a bam file and vcf file covering the region chr12:24000000-27000000
