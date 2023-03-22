@@ -347,11 +347,14 @@ def main(options):
   bam_out_s = pysam.AlignmentFile(output_name+".haps.bam", template = bam_in, mode = "wb")
 
   bam_outs = [bam_out_0, bam_out_1, bam_out_2, bam_out_s]
-
+  
   RX_dict = parse_hichip(bam_in, vcf)
   print("finished parsing, starting voting...")
   RX_dict = vote_hap_majority(RX_dict,log)
-  # write_library(RX_dict)
+  
+  # Add a function here to write a output summary
+  # write_summary(RX_dict)
+  
   bam_in.close()
   bam_in   = pysam.AlignmentFile(options.reads)
   print("finished voting, starting parsing again...")
