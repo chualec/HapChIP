@@ -40,13 +40,10 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.11"
-    # - name: Install dependencies
-    #   run: |
-    #     python -m pip install --upgrade pip
-    #     pip install pytest
-    #     if [ -f requirements.txt ]; then
-    #         pip install -r requirements.txt
-    #     fi
-    - name: Test with pytest
+    - name: Install dependencies
       run: |
-        python3 HapChIP/HapChIP_unittest.py
+         python -m pip install --upgrade pip
+         pip install pysam
+    - name: Unittest
+      run: |
+        python3 HapChIP/HapChIP.py -b example_input/example.bam -v example_input/example.vcf.gz -o ./example_output
