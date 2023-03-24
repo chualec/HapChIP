@@ -6,6 +6,7 @@ from itertools import combinations
 import sys, getopt
 from datetime import datetime
 import pysam
+from collections import Counter
 
 def welcome(options):
   '''
@@ -283,6 +284,12 @@ def vote_hap_majority(RX_dict, log):
         RX_dict[RX] = 3
   return(RX_dict)
 
+def write_summary(RX_dict, log):
+    c = Counter(RX_dict.values())
+    log.write("Haplotype Summary:\n")
+    for i in range(0, 4):
+        log.write("{} : {} \n".format(i, c[i]))
+
 # def write_library(RX_library):
   # print(RX_library)
   # test = open("/mctp/share/users/chualec/hichip/vif/files/test.txt", "w")
@@ -353,7 +360,7 @@ def main(options):
   RX_dict = vote_hap_majority(RX_dict,log)
   
   # Add a function here to write a output summary
-  # write_summary(RX_dict)
+  write_summary(RX_dict, log)
   
   bam_in.close()
   bam_in   = pysam.AlignmentFile(options.reads)
