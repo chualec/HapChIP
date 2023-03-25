@@ -51,4 +51,7 @@ python3 HapChIP/HapChIP.py -b example_input/example.bam -v example_input/example
 
 
   
-A unit test has been provided with a bam file and vcf file covering the region chr12:24000000-27000000
+A unit test has been provided with a bam file and vcf file covering chr13 region.
+The output will contain 5 files:
+- 4 bam files containing reads split into either haplotype 1, haplotype 2, unknown haplotypes, or conflicting haplotypes
+- One log file containing overall summary
