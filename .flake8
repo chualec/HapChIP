@@ -1,0 +1,4 @@
+[flake8]
+per-file-ignores =
+    # line too long
+    HapChIP: E501, F841, E722, F401, F811, E203,
