@@ -1,9 +1,9 @@
 import argparse
 import os
-import operator
+
+
+
 import sys
-from itertools import combinations
-import sys, getopt
 from datetime import datetime
 import pysam
 from collections import Counter

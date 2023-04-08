@@ -7,8 +7,6 @@ import sys, getopt
 from datetime import datetime
 import pysam
 
-# the cigar seq function expands the sequence information to account for soft clipping, insertions, and deletions
-
 
 def progressBar(current, total, end=False, text="NA"):
     barLength = 20
@@ -192,7 +190,8 @@ def parse_hichip(bamfile, bam_outs):
                 start2 = str(read2.reference_start + 1)
                 end2 = str(read2.reference_end)
                 if abs(int(start2) - int(start1)) > 1000 or chr1 != chr2:
-                    bam_outs[3].write(
+                    # bam_outs[3].write(
+                    bam_outs.write(
                         "\t".join(
                             [
                                 str(bam_read.query_name),
@@ -206,15 +205,15 @@ def parse_hichip(bamfile, bam_outs):
                             ]
                         )
                     )
-                if chr1 != chr2:
-                    bam_outs[2].write(bam_read)
-                    bam_outs[2].write(read2)
-                elif abs(int(start1) - int(start2)) > 1000:
-                    bam_outs[1].write(bam_read)
-                    bam_outs[1].write(read2)
-                else:
-                    bam_outs[0].write(bam_read)
-                    bam_outs[0].write(read2)
+                # if chr1 != chr2:
+                #     bam_outs[2].write(bam_read)
+                #     bam_outs[2].write(read2)
+                # elif abs(int(start1) - int(start2)) > 1000:
+                #     bam_outs[1].write(bam_read)
+                #     bam_outs[1].write(read2)
+                # else:
+                #     bam_outs[0].write(bam_read)
+                #     bam_outs[0].write(read2)
             else:
                 bam_library[str(bam_read.query_name)] = bam_read
         # else:
@@ -263,22 +262,22 @@ def main(options):
     bam_in = pysam.AlignmentFile(options.bam, "r")
 
     # make output files
-    bam_out_0 = pysam.AlignmentFile(
-        output_name + ".cis_short.bam", template=bam_in, mode="wb"
-    )
-    bam_out_1 = pysam.AlignmentFile(
-        output_name + ".cis_dist.bam", template=bam_in, mode="wb"
-    )
-    bam_out_2 = pysam.AlignmentFile(
-        output_name + ".trans.bam", template=bam_in, mode="wb"
-    )
-    bam_out_s = pysam.AlignmentFile(
-        output_name + ".bad.bam", template=bam_in, mode="wb"
-    )
+    # bam_out_0 = pysam.AlignmentFile(
+    #     output_name + ".cis_short.bam", template=bam_in, mode="wb"
+    # )
+    # bam_out_1 = pysam.AlignmentFile(
+    #     output_name + ".cis_dist.bam", template=bam_in, mode="wb"
+    # )
+    # bam_out_2 = pysam.AlignmentFile(
+    #     output_name + ".trans.bam", template=bam_in, mode="wb"
+    # )
+    # bam_out_s = pysam.AlignmentFile(
+    #     output_name + ".bad.bam", template=bam_in, mode="wb"
+    # )
     bam_out_t = open(output_name + ".pairs.txt", "w")
-    # record = open(output_name+".decomb4", "w")
-    bam_outs = [bam_out_0, bam_out_1, bam_out_2, bam_out_t]
-
+    # # record = open(output_name+".decomb4", "w")
+    # bam_outs = [bam_out_0, bam_out_1, bam_out_2, bam_out_t]
+    bam_outs = bam_out_t
     parse_hichip(bam_in, bam_outs)
 
     print("runtime = ", (datetime.now() - startTime))
@@ -298,5 +297,3 @@ if __name__ == "__main__":
     parser.add_argument("--name", type=str, required=False, help="Optional output name")
     parsed, unparsed = parser.parse_known_args()
     main(parsed)
-
-# python3 ../vif_converter_2.py -s test.namesort.bam -v ../HC-12v2/HC-12v2.phased.phased.VCF.gz -o . --name vif2
