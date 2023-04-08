@@ -12,15 +12,14 @@ import pysam
 
 
 def test_readvcf():
-  assert pysam.VariantFile("../unittest/unittest.vcf.gz"), "No VCF file vcf"
+    assert pysam.VariantFile("../unittest/unittest.vcf.gz"), "No VCF file vcf"
+
 
 def test_readbam():
-  assert pysam.AlignmentFile("../unittest/unittest.bam"), "No Bam file detected"
+    assert pysam.AlignmentFile("../unittest/unittest.bam"), "No Bam file detected"
 
-      
+
 if __name__ == "__main__":
-  test_readvcf()
-  test_readbam()
-  print("everything passed")
-     
-  
+    test_readvcf()
+    test_readbam()
+    print("everything passed")
